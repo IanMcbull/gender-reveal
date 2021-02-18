@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+    <title>Gender Reveal</title>
+</head>
+<body>
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="container" id="content">
+      <div class="row shadow-lg">
+          <div class="col-md-12 column">
+              <img src="/images/left_foot.jpg" class="foot left_foot">
+              <img src="/images/right_foot.jpg" class="foot right_foot">
+              <div class="card-content">
+                <h3>Gender reveal</h3>
+                <h5>BABY O</h5>
+                <div class="baby_icon">
+                    <img src="images/boy.png" class="babies img-fluid">
+                    <img src="images/girl.png" class="babies img-fluid">
+                </div>
+                <p>Is it a boy? Is it  a girl? Sign in with your name to find out.</p>
+              </div>
+              <form class=" form mt-2" id="form" method="GET" action="http://localhost:9900/vote">
+               <label>Name</label>
+               <input type="text" placeholder="enter your first two names for example Ryan kamau" class="form-control" name="fullname">
+               <button type="submit" class="btn mb-5 mt-3 btn-info">Click Me</button>
+              </form>
+          </div>
+      </div>
+    </div>
+    <script src="./login.js"></script>
+</body>
+</html>

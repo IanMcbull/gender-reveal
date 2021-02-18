@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Indie+Flower&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to right,#f4989e,#78a0cf);
+    overflow: hidden;
+}
+.loader{
+    height: 50px;
+    animation: rotate 3s linear infinite;
+    transform-origin: bottom center;
+    position: absolute;
+}
+.circle{
+    display: inline-block;
+    background-color: blueviolet;
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    animation: grow 1.5s linear infinite;
+    transform: scale(0);
+}
+.circle:nth-child(2){
+    background-color: coral;
+    animation-delay: 0.75s;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes grow{
+    50%{
+        transform: scale(1);
+    }
+}
+
+#content{
+    margin-top: 50px;
+    height: 10%;
+    background-color: white;
+    font-family: 'Indie Flower',sans-serif;
+    opacity: 0;
+    display: none;
+    transition: opacity 2s ease-in;
+}
+
+.baby_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+#image{
+    height: 500px;
+    background:url(/images/boy_girl.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media (max-width:300px){
+  #image{
+      height: 300px;
+  }
+}
+.babies{
+    width:50px;
+}
+.foot{
+    width: 30px;
+    visibility: hidden;
+}
+.left_foot{
+    position: absolute;
+    top:400px;
+    transform:rotateZ(90deg);
+    left:470px;
+    animation-name: steps;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    transition-property: all;
+    transition: linear;
+    transition-timing-function:step-start, cubic-bezier(0.5, 0.7, 1.0, 0.2);
+    animation-fill-mode: forwards;
+}
+@keyframes steps{
+    0%{left:0};
+    15%{left: 10px};
+    25%{left:50px}
+    35%{left:150px}
+    50%{left:200px}
+    75%{left:300px}
+    100%{left:470px}
+}
+.right_foot{
+    position: absolute;
+    top:450px;
+    left:490px;
+    transform:rotateZ(90deg);
+    animation-name: steps;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+#form{
+    position: relative;
+    top:20px;
+
+}
+.card-content{
+    text-align: center;
+    margin-top: 30px;
+}
