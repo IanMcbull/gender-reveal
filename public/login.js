@@ -23,7 +23,8 @@ let database = [
     "samoina wangui",
     "jayden gathatwa",
     "patrick mbuguah",
-    "nancy njeri"
+    "nancy njeri",
+    "jane doe"
 ]
 document.querySelector('.btn').addEventListener('submit',(e)=>{
     e.preventDefault(); 
