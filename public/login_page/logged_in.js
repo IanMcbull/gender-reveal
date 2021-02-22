@@ -11,7 +11,7 @@ girl.addEventListener('click',()=>{
                         <h4 class="alert-heading"></h4>
                         <p>Oh no you got it wrong. It's a boy!!Better luck next time</p>
                         <hr>
-                        <p class="mb-0">Baby Irvin says hi!</p>
+                        <p class="mb-0">Baby I says hi!</p>
                       </div>`
     },3500)
 })
